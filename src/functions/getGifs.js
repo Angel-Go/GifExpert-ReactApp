@@ -1,5 +1,11 @@
 export const getGifs = (category) => {
 
+    /*
+    Esta funcion hace una peticion asincrona a la API de Giphy mandandole la categoria y el numero de
+    resultados que espera recibir (8) y retorna una promesa con un objeto que contiene el id, titulo y url
+    de la data regresada por la API mencionada.
+    */
+
     const apiKey = 'rV8bYTQ31V0v1VT0Te3cLj3nuf7Kymb9';
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${encodeURI(category)}&limit=8`;
 

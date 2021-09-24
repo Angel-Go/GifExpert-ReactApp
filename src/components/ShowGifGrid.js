@@ -6,7 +6,18 @@ import { useFetchGifs } from '../hooks/useFetchGifs';
 
 export const ShowGifGrid = ({ category }) => {
 
+    /*
+    Se crean dos variables ("gifs" que contiene un arreglo de objetos con el id, title y url de un GIF
+    Y "loading" que tiene un valor boleano) a partir de una desestructuracion del objeto retornado
+    por el hook "useFetchGifs"
+    */
     const {data:gifs, loading} = useFetchGifs(category);
+
+    /*
+    Mediante el funtional component "GetGifItem" se añade al componente retornado un elemento lista con
+    el GIF y su titulo de la categoria recibida. Mediante gifs.map se van agregando todos los gif con su titulo
+    dentro de la lista <ul>
+    */
 
     return (
         <>

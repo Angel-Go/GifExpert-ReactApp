@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const GetGifItem = ({ id, title, url }) => {
+export const GetGifItem = ({ title, url }) => {
 
     return (
         <li className="listaGif">
